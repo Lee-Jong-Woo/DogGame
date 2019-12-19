@@ -2,22 +2,22 @@ package com.example.doggame;
 
 public class Siru extends Dog{
 
-    String name = "시루";
+    private String name = "시루";
     @Override
-    public String Name(){
-        String result = super.Name() + name;
-        return result;
+    public void Name(){
+        super.name = name;
+        super.Name();
     }
 
     @Override
-    public String Bark(){
-        String result = name + super.Bark() + "왈왈";
-        return result;
+    public void Bark(){
+        super.bark = "왈왈";
+        super.Bark();
     }
 
     @Override
-    public String Run(){
-        String result = name + super.Run() + "쌩쌩";
-        return result;
+    public void Run(){
+        super.run = "썡썡";
+        super.Run();
     }
 }

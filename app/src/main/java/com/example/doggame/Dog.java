@@ -1,24 +1,25 @@
 package com.example.doggame;
 
 public class Dog {
-
+    private DogListener dogListener = null;
+    public String name, bark, run;
     public void Move(){
-
     }
 
-    public String Name(){
-        String result = "나는 ";
-        return result;
+    public void Name(){
+        dogListener.onName(name);
     }
 
-    public String Bark(){
-        String result = "는 ";
-        return result;
+    public void Bark(){
+        dogListener.onBark(bark);
     }
 
-    public String Run(){
-        String result = "는 ";
-        return result;
+    public void Run(){
+        dogListener.onRun(run);
+    }
+
+    public void onDogListener(DogListener listener){
+        this.dogListener = listener;
     }
 }
 
